@@ -1,3 +1,22 @@
+# Freeverse
+This website is a FREE GAMEs list Library. 
+
+## website link
+
+Visit the website by clicking this link: [Freeverse](https://freeverse-65295.web.app/home)
+
+![alt text](https://i.ibb.co/S3PwHMP/Fire-Shot-Capture-012-React-App-freeverse-65295-web-app.png)
+
+
+
+## functionalities
+* A free game library made for gamers. 
+* User can login and register to the website. 
+* User can add playlist, the playlist section is made using redux. 
+* Separate Admin Dashboard System, Admin can add or delete the game list.  
+
+---------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
