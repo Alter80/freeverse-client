@@ -12,7 +12,7 @@ Visit the website by clicking this link: [Freeverse](https://freeverse-65295.web
 ## functionalities
 * A free game library made for gamers. 
 * User can login and register to the website. 
-* User can add playlist, the playlist section is made by redux. 
+* User can add playlist, the playlist section is made using redux. 
 * Separate Admin Dashboard System, Admin can add or delete the game list.  
 
 ---------------------------------------------------------------------------------------
