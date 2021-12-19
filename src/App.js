@@ -15,6 +15,7 @@ import { useSelector } from 'react-redux';
 import ByCategory from './components/ByCategory/ByCategory';
 import AuthProvider from './context/AuthProvider';
 import Dashboard from './components/DashBoard/Dashboard';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   const selectedGames = useSelector((state) => state.gameCounter.playList);
@@ -51,9 +52,9 @@ function App() {
               <MyPlaylist></MyPlaylist>
             </Route>
 
-            <Route exact path='/dashboard'>
+            <PrivateRoute exact path='/dashboard'>
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
 
             <Route exact path='/login'>
               <Login></Login>

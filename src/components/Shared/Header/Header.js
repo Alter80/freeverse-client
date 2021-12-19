@@ -13,6 +13,7 @@ const Header = (props) => {
     const size = selectedGames.length
     console.log(size)
     // console.log(props.data.length)
+    console.log(admin);
 
     const history = useHistory();
 
@@ -99,7 +100,7 @@ const Header = (props) => {
                         <span className=''>
 
                             {user?.email ? <p></p> :
-                                <Link to='/login'><Button variant='outline-dark'>Login</Button></Link>}
+                                <Link to='/login'><Button variant='outline-light'>Login</Button></Link>}
 
                         </span>
                         {user?.email &&
@@ -123,6 +124,12 @@ const Header = (props) => {
                                             >
                                                 <IoGameControllerOutline /> My Playlist {size}
                                             </NavLink>
+
+                                            {/* <Nav.Link><Link className='text-decoration-none text-muted' to="/dashboard">My Dashboard</Link></Nav.Link> */}
+
+                                            {admin ? <Nav.Link><Link className='text-decoration-none text-muted' to="/dashboard">My Dashboard(Admin use Only)</Link></Nav.Link> : <div></div>}
+
+                                            {/* <Nav.Link><Link className={admin ? 'text-decoration-none text-muted' : 'disabled text-decoration-none text-muted'} to="/dashboard">My Dashboard(Admin use Only)</Link></Nav.Link> */}
 
 
                                             <Dropdown.Item href="#/action-3"><Button variant='outline-dark' onClick={logOutButton}>Logout</Button></Dropdown.Item>
