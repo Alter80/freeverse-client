@@ -1,5 +1,5 @@
 # Alt-Medic
-This website is an online health platfrom. 
+This website is a FREE GAMEs list Library. 
 
 ## website link
 
