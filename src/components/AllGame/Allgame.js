@@ -15,7 +15,8 @@ const Allgame = (props) => {
 
 
     return (
-        <div className="col p-1">
+        <div data-aos="fade-up"
+            data-aos-duration="1000" className="col p-1">
             <div className="card d-md-flex flex-md-row align-items-center bg-dark shadow-sm h-100">
 
                 <div>

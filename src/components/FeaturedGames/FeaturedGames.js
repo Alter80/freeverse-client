@@ -27,13 +27,13 @@ const FeaturedGames = () => {
 
     return (
         <div className='p-3'>
-            <h3>All games list</h3>
+
             <Row xs={1} md={3} onClick={() => onLinkClick} className="g-3">
                 {Array.from({ length: 1 }).map((_, idx) => (
 
                     featuredGames.slice(0, 9).map(game => <Allgame
                         key={game.id}
-                        game={game}></Allgame>)
+                        game={game} ></Allgame>)
 
                 ))}
             </Row>

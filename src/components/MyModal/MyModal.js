@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToPlaylist } from '../../redux/slices/gameSlice';
 
+import { useSpring, animated as a } from "react-spring";
+
 const MyModal = (props) => {
     const { id, developer, game_url, genre, platform, publisher, release_date, short_description, thumbnail, title } = props.data;
     // console.log(props.data)
@@ -11,10 +13,20 @@ const MyModal = (props) => {
 
     const [clicked, setClicked] = useState(true);
 
+    // spring animation
+    const [greetingStatus, displayGreeting] = React.useState(false);
+    const contentProps = useSpring({
+        opacity: greetingStatus ? 1 : 0,
+        marginTop: greetingStatus ? 0 : 1500
+    });
+
+
     const onAdd = (gameItem, clicked, e) => {
         dispatch(addToPlaylist(gameItem))
 
         setClicked(clicked); //setclicked(true) 
+
+        displayGreeting(a => !a)
 
         e.preventdefault();
     }
@@ -64,6 +76,13 @@ const MyModal = (props) => {
                     <Button onClick={props.onHide} type="button" className="p-2 btn-dark text-white btn-outline-secondary btn-sm">Close</Button>
                 </Stack>
 
+                {!greetingStatus ? (
+                    <div className="text-center mt-1">Click 'Add To Playlist' to your library</div>
+                ) : (
+                    <a.div className="text-center mt-1" style={contentProps}>
+                        <p>Added To playlist. Check 'My Playlist' option</p>
+                    </a.div>
+                )}
 
             </Modal.Body>
         </Modal >

@@ -8,9 +8,12 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h3>Browse All Games</h3>
+            <h2>Browse All Games</h2>
             <FeaturedGames></FeaturedGames>
-            <Link to='/bycategory'> <Button className='main-btn btn-sm my-2' variant="outline-light">Browse By Category</Button></Link>
+            <Link to='/bycategory'> <Button data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="500"
+                data-aos-offset="0" className='main-btn btn-sm my-2' variant="outline-light">Browse By Category</Button></Link>
 
         </div>
     );

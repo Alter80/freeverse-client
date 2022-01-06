@@ -69,7 +69,11 @@ const MyPlaylist = () => {
                 <Row sx={1} md={3} >
                     {
                         selectedGames.map(value => <Col key={value.id} className='my-5'>
-                            <Card className='h-100 bg-dark hover-card card-border' >
+                            <Card data-aos="fade-left"
+                                data-aos-anchor="#example-anchor"
+                                data-aos-offset="500"
+                                data-aos-duration="500" className='h-100 bg-dark hover-card card-border' >
+
                                 <Card.Img className='img-fluid' variant="top" src={value.thumbnail} height='300' />
                                 <Card.Body>
                                     <Card.Title>{value.title}</Card.Title>
